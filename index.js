@@ -19,7 +19,7 @@ const refreshBtn = document.getElementById("refresh-btn");
 // ===== Local cache (also saved in localStorage) =====
 let booksCache = [];
 
-// Load from localStorage immediately (so UI shows instantly)
+// Load from localStorage immediately 
 (function restoreFromLocalStorage() {
   try {
     const raw = localStorage.getItem("bookvault_books");
@@ -40,7 +40,8 @@ let booksCache = [];
 function showApp() {
   landing.classList.add("hidden");
   app.classList.remove("hidden");
-  // If we don't have anything yet, load from API
+  
+// If we don't have anything yet, load from API
   if (!booksCache || booksCache.length === 0) {
     loadBooks();
   }

@@ -27,7 +27,7 @@ body {
     user-select: none;
   }
   
-  /* Soft card background used on panels + (optionally) cards */
+  /* Soft card background used on panels + cards */
   .card-bg {
     background-color: #fff6e6;
   }
@@ -65,7 +65,7 @@ body {
   .btn-primary:hover { background-color: #b24443; }
   .btn-primary:active { transform: translateY(1px); }
   
-  /* Book card look (bordered + soft bg) */
+  /* Book card look */
   .book-card {
     background-color: #fff6e6;
     border: 1px solid #e0d4c4;
