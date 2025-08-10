@@ -14,13 +14,13 @@ These instructions will get you a copy of the project up and running on your loc
 - Git to clone the repo
 - A code editor: VS Code 
 
-### Installing
+## Installing
 
-# 1. Open Terminal
+1. Open Terminal
 - git clone https://github.com/alissonslopez/bookstore.git
 - cd bookstore
 
-# 2. Open the index.html file in your browser to run locally, or use VS Code’s Live Server extension for auto-refresh.
+2. Open the index.html file in your browser to run locally, or use VS Code’s Live Server extension for auto-refresh.
 
 ## Deployment
 
