@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookVault · Simple DOM Bookstore</title>
+
+    <!-- Tailwind (dev CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font: Praise -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Praise&display=swap" rel="stylesheet">
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="min-h-screen text-slate-800">
+    <!-- Landing -->
+    <section id="landing" class="px-6 py-10 max-w-5xl mx-auto">
+      <header class="flex items-center justify-between gap-4">
+        <h1 class="text-6xl md:text-7xl gradient-text praise-regular">BookVault</h1>
+        <nav class="flex gap-2">
+          <button id="btn-new" class="btn-primary">I’m new here</button>
+          <button id="btn-books" class="btn-primary">Take me to the Books</button>
+        </nav>
+      </header>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="p-6 rounded-2xl card-bg shadow-sm ring-1 ring-slate-200">
+          <h2 class="text-xl font-semibold">What is BookVault?</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-700">
+            This is a simple book list  tool where you can add or delete books of your choice. It’s open, no login, and no approval needed.  
+          </p>
+          <ul class="mt-4 list-disc pl-5 text-sm text-slate-700 space-y-1">
+            <li>Add your favorites</li>
+            <li>Write about it (genre, total pages, how it made you feel)</li>
+            <li>or clear the clutter!</li>
+            <h2 class="text-xl font-semibold">URL image wont load</h2>
+            <li>Choose whichever picture you want based on the book</li>
+            <li>Right-click the photo </li>
+            <li>Select <span class="font-medium">Open image to new tab</span>.</li>
+            <li>Then copy and past the URL</li>
+
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl card-bg shadow-sm ring-1 ring-slate-200">
+          <h2 class="text-xl font-semibold">Quick Start</h2>
+          <ol class="mt-2 list-decimal pl-5 text-sm text-slate-700 space-y-1">
+            <li>Click <span class="font-medium">Take me to the Books</span>.</li>
+            <li>Use the form to add a book.</li>
+            <li>Use the trash icon to delete one.</li>
+          </ol>
+          <div class="mt-6">
+            <button id="btn-get-started" class="btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App -->
+    <main id="app" class="hidden px-6 pb-16 max-w-5xl mx-auto">
+      <section class="mt-8 grid gap-6 md:grid-cols-3">
+        <!-- Add Book Form -->
+        <form id="book-form" class="md:col-span-1 p-5 card-bg rounded-2xl shadow-sm ring-1 ring-slate-200 space-y-3">
+          <h2 class="text-lg font-semibold">Add a Book</h2>
+
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Title</span>
+            <input name="title" required class="input-field" placeholder="The Pragmatic Programmer" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Author</span>
+            <input name="author" required class="input-field" placeholder="Andrew Hunt" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Year</span>
+            <input name="year" type="number" min="0" class="input-field" placeholder="1999" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Image URL (optional)</span>
+            <input name="imageUrl" class="input-field" placeholder="https://..." />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-medium text-slate-700">Description (optional)</span>
+            <textarea name="description" rows="3" class="input-field resize-y" placeholder="Why you recommend it..."></textarea>
+          </label>
+
+          <button class="btn-primary w-full" type="submit">Add Book</button>
+          <p id="form-msg" class="text-sm text-slate-600"></p>
+        </form>
+
+        <!-- Books List -->
+        <section class="md:col-span-2">
+          <div class="flex items-center justify-between gap-3">
+            <h2 class="text-lg font-semibold">Books</h2>
+            <div class="flex gap-2">
+              <button id="back-btn" class="btn-primary">Back</button>
+              <button id="refresh-btn" class="btn-primary">Refresh</button>
+            </div>
+          </div>
+
+          <div id="books-container" class="mt-3 grid gap-4 sm:grid-cols-2"></div>
+          <p id="status" class="mt-4 text-sm text-slate-600" aria-live="polite"></p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="mt-10 py-8 text-center text-xs text-slate-500">
+      <p>Built for the Path2Tech DOM project · Ally</p>
+    </footer>
+
+    <!-- Corner cat -->
+    <img src="./cornerCat.png" alt="Corner Cat" class="corner-cat" />
+
+    <!-- App JS -->
+    <script defer src="./index.js"></script>
+  </body>
+</html>
+

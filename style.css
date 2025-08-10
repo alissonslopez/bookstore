@@ -1,0 +1,76 @@
+/* Page background */
+body {
+    background-color: #c9a056; /* gold */
+  }
+  
+  /* Title font + gradient */
+  .praise-regular {
+    font-family: "Praise", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #f7ad39, #d45453);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Corner cat */
+  .corner-cat {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: auto;
+    z-index: 50;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* Soft card background used on panels + (optionally) cards */
+  .card-bg {
+    background-color: #fff6e6;
+  }
+  
+  /* Inputs */
+  .input-field {
+    margin-top: 0.25rem;
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid #cbd5e1;      /* slate-300 */
+    background-color: #ffffff;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;             /* text-sm */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    outline: none;
+  }
+  .input-field:focus {
+    border-color: #d45453;
+    box-shadow: 0 0 0 3px rgba(212,84,83,0.25);
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;             /* 2xl */
+    padding: 0.5rem 1rem;            /* px-4 py-2 */
+    font-weight: 500;
+    background-color: #d45453;       /* main */
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: background-color .2s, transform .2s;
+  }
+  .btn-primary:hover { background-color: #b24443; }
+  .btn-primary:active { transform: translateY(1px); }
+  
+  /* Book card look (bordered + soft bg) */
+  .book-card {
+    background-color: #fff6e6;
+    border: 1px solid #e0d4c4;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  
